@@ -81,6 +81,8 @@ namespace FizzBuzzCS
                 Console.Write('\n');
             }
         }
+        // FizzBuzz using switch-case written by Lewis1986
+        // Comment in https://www.codeproject.com/Articles/1244852/The-Real-Answer-to-the-FizzBuzz-Interview-Question
         static void FizzBuzzSwitch(uint count)
         {
             for (uint i = 1; i <= count; ++i)
@@ -102,50 +104,6 @@ namespace FizzBuzzCS
                     default:
                         Console.WriteLine(i);
                         break; // to silent the warning in C# compiler
-                }
-            }
-        }
-        static void FizzBuzzAddition(int runningCount)
-        {
-            int fizzBuzzCount = 0;
-            int fizzCount = 0;
-            int buzzCount = 0;
-            int numCount = 0;
-            int c3 = 0;
-            int c5 = 0;
-
-            for (int i = 1; i <= runningCount; ++i)
-            {
-                if (++c3 == 3)
-                {
-                    c3 = 0;
-                    if (++c5 == 5)
-                    {
-                        c5 = 0;
-                    }
-                }
-                if (c3 == 0)
-                {
-                    if (c5 == 0)
-                    {
-                        fizzBuzzCount++;
-                        Console.WriteLine("FizzBuzz");
-                    }
-                    else
-                    {
-                        buzzCount += 1;
-                        Console.WriteLine("Fizz");
-                    }
-                }
-                else if (c5 == 0)
-                {
-                    fizzCount++;
-                    Console.WriteLine("Buzz");
-                }
-                else
-                {
-                    numCount++;
-                    Console.WriteLine(i);
                 }
             }
         }
