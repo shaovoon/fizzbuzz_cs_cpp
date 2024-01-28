@@ -83,7 +83,7 @@ void FizzBuzzAppend(int count)
 // Comment in https://www.codeproject.com/Articles/1244852/The-Real-Answer-to-the-FizzBuzz-Interview-Question
 void FizzBuzzSwitch(unsigned int count) 
 {
-    for (int i = 1; i <= count; ++i)
+    for (unsigned int i = 1; i <= count; ++i)
     {
         unsigned int test = 0;
         test |= (i % 3 == 0) ? 2 : 0; // set 3 if is fizz
