@@ -3,12 +3,14 @@
 void FizzBuzz(int count);
 void FizzBuzzOptimized(int count);
 void FizzBuzzAppend(int count);
+void FizzBuzzSwitch(unsigned int count);
 
 int main()
 {
     //FizzBuzz(20);
     //FizzBuzzOptimized(20);
-    FizzBuzzAppend(20);
+    //FizzBuzzAppend(20);
+    FizzBuzzSwitch(20);
 
     return 0;
 }
@@ -75,5 +77,29 @@ void FizzBuzzAppend(int count)
             std::cout << i;
 
         std::cout << '\n';
+    }
+}
+// FizzBuzz using switch-case written by Lewis1986
+// Comment in https://www.codeproject.com/Articles/1244852/The-Real-Answer-to-the-FizzBuzz-Interview-Question
+void FizzBuzzSwitch(unsigned int count) 
+{
+    for (int i = 1; i <= count; ++i)
+    {
+        unsigned int test = 0;
+        test |= (i % 3 == 0) ? 2 : 0; // set 3 if is fizz
+        test |= (i % 5 == 0) ? 4 : 0; // set 5 if is buzz
+        switch (test & 6) {
+        case 6:
+            std::cout << "FizzBuzz\n";
+            break;
+        case 2:
+            std::cout << "Fizz\n";
+            break;
+        case 4:
+            std::cout << "Buzz\n";
+            break;
+        default:
+            std::cout << i << "\n";
+        }
     }
 }
