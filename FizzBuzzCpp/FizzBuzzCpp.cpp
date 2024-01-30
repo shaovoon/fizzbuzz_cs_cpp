@@ -105,7 +105,7 @@ void FizzBuzzSwitch(unsigned int count)
         }
     }
 }
-static void FizzBuzzAddition(int count)
+void FizzBuzzAddition(int count)
 {
 	int c3 = 0;
 	int c5 = 0;
