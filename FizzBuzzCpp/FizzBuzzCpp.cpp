@@ -4,13 +4,15 @@ void FizzBuzz(int count);
 void FizzBuzzOptimized(int count);
 void FizzBuzzAppend(int count);
 void FizzBuzzSwitch(unsigned int count);
+void FizzBuzzAddition(int count);
 
 int main()
 {
     //FizzBuzz(20);
     //FizzBuzzOptimized(20);
     //FizzBuzzAppend(20);
-    FizzBuzzSwitch(20);
+    //FizzBuzzSwitch(20);
+    FizzBuzzAddition(20);
 
     return 0;
 }
@@ -90,16 +92,45 @@ void FizzBuzzSwitch(unsigned int count)
         test |= (i % 5 == 0) ? 4 : 0; // set 5 if is buzz
         switch (test & 6) {
         case 6:
-            std::cout << "FizzBuzz\n";
+            std::cout << "FizzBuzz" << std::endl;
             break;
         case 2:
-            std::cout << "Fizz\n";
+            std::cout << "Fizz" << std::endl;
             break;
         case 4:
-            std::cout << "Buzz\n";
+            std::cout << "Buzz" << std::endl;
             break;
         default:
-            std::cout << i << "\n";
+            std::cout << i << std::endl;
         }
     }
+}
+static void FizzBuzzAddition(int count)
+{
+	int c3 = 0;
+	int c5 = 0;
+	for (int i = 1; i <= count; ++i)
+	{
+		++c3;
+		++c5;
+		if (c3 == 3)
+			c3 = 0;
+		if (c5 == 5)
+			c5 = 0;
+
+		if (c3 == 0 && c5 == 0)
+		{
+            std::cout << "FizzBuzz" << std::endl;
+		}
+		else if (c3 == 0)
+		{
+            std::cout << "Fizz" << std::endl;
+		}
+		else if (c5 == 0)
+		{
+            std::cout << "Buzz" << std::endl;
+		}
+		else
+            std::cout << i << std::endl;
+	}
 }

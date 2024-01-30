@@ -13,8 +13,8 @@ namespace FizzBuzzCS
             //FizzBuzz(20);
             //FizzBuzzOptimized(20);
             //FizzBuzzAppend(20);
-            //FizzBuzzAddition(20);
-            FizzBuzzSwitch(20);
+            //FizzBuzzSwitch(20);
+            FizzBuzzAddition(20);
         }
         static void FizzBuzz(int count)
         {
@@ -105,6 +105,35 @@ namespace FizzBuzzCS
                         Console.WriteLine(i);
                         break; // to silent the warning in C# compiler
                 }
+            }
+        }
+        static void FizzBuzzAddition(int count)
+        {
+            int c3 = 0;
+            int c5 = 0;
+            for (int i = 1; i <= count; ++i)
+            {
+                ++c3;
+                ++c5;
+                if (c3 == 3)
+                    c3 = 0;
+                if (c5 == 5)
+                    c5 = 0;
+
+                if (c3 == 0 && c5 == 0)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                else if (c3 == 0)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else if (c5 == 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else
+                    Console.WriteLine(i);
             }
         }
     }
