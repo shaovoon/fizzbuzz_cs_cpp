@@ -5,6 +5,7 @@ void FizzBuzzOptimized(int count);
 void FizzBuzzAppend(int count);
 void FizzBuzzSwitch(unsigned int count);
 void FizzBuzzAddition(int count);
+void FizzBuzzAddition2(int count);
 
 int main()
 {
@@ -12,7 +13,8 @@ int main()
     //FizzBuzzOptimized(20);
     //FizzBuzzAppend(20);
     //FizzBuzzSwitch(20);
-    FizzBuzzAddition(20);
+    //FizzBuzzAddition(20);
+	FizzBuzzAddition2(20);
 
     return 0;
 }
@@ -105,6 +107,7 @@ void FizzBuzzSwitch(unsigned int count)
         }
     }
 }
+// Submitted by Jacques Fournier
 void FizzBuzzAddition(int count)
 {
 	int c3 = 0;
@@ -130,7 +133,38 @@ void FizzBuzzAddition(int count)
 		{
             std::cout << "Buzz" << std::endl;
 		}
-		else
+        else
+        {
             std::cout << i << std::endl;
+        }
+	}
+}
+// Submitted by Bela Gyuricza
+void FizzBuzzAddition2(int count)
+{
+	int c3 = 3;
+	int c5 = 5;
+	for (int i = 1; i <= count; ++i)
+	{
+		if (c3 == i && c5 == i)
+		{
+            std::cout << "FizzBuzz" << std::endl;
+			c3 += 3;
+			c5 += 5;
+		}
+		else if (c3 == i)
+		{
+            std::cout << "Fizz" << std::endl;
+			c3 += 3;
+		}
+		else if (c5 == i)
+		{
+            std::cout << "Buzz" << std::endl;
+			c5 += 5;
+		}
+        else
+        {
+            std::cout << i << std::endl;
+        }
 	}
 }
